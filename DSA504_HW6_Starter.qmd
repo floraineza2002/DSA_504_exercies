@@ -13,7 +13,7 @@ split evenly across all 6)
 INSTRUCTIONS:
 - Use retail_sales.csv -- the ORIGINAL, UNCLEANED file (not
   retail_sales_clean.csv). This assignment asks you to clean it yourself,
-  in R, inside this report.
+  in R, inside this report.s
 - Fill in each TODO code chunk below. Do not delete or reorder sections.
 - Render this file (the Render button in RStudio) to check your work as
   you go -- rendering early and often is much easier than debugging a
