@@ -1,0 +1,136 @@
+---
+title: "DSA 504 — Homework 6: A Reproducible Retail Sales Report"
+author: "YOUR NAME HERE"
+format: html
+---
+
+<!--
+Assigned: Class 22 (Wednesday, Nov 18)
+Due: Before Class 23 (Monday, Nov 23)
+Worth: 1 of 6 homework assignments (homework is 50% of your final grade,
+split evenly across all 6)
+
+INSTRUCTIONS:
+- Use retail_sales.csv -- the ORIGINAL, UNCLEANED file (not
+  retail_sales_clean.csv). This assignment asks you to clean it yourself,
+  in R, inside this report.
+- Fill in each TODO code chunk below. Do not delete or reorder sections.
+- Render this file (the Render button in RStudio) to check your work as
+  you go -- rendering early and often is much easier than debugging a
+  wall of errors at the end.
+- A few sections ask a short written answer -- write it directly in the
+  text, not inside a code chunk.
+- AI use: if you used an AI tool for any part of this assignment, briefly
+  note where and how in the disclosure section at the bottom, per the
+  course AI-use policy.
+
+SUBMISSION -- required step:
+Render this file to HTML, then upload BOTH the rendered .html file and
+   this .qmd file to the HW6 assignment on Brightspace, and paste the
+   direct link to your hw6/ folder into the submission comments box.
+
+GRADING BREAKDOWN:
+  Part 1 -- Setup & Load            15%
+  Part 2 -- Clean                   20%
+  Part 3 -- Analyze                 25%
+  Part 4 -- Visualize               20%
+  Part 5 -- Written Reflection & AI Disclosure   20%
+-->
+
+## Part 1 — Setup & Load (15%)
+
+Load `retail_sales.csv` into a tibble called `sales`.
+
+```{r}
+#| message: false
+# TODO 1a: load tidyverse and read retail_sales.csv into `sales`
+
+```
+
+Report, using inline code (not just printed in the chunk above): how many
+rows and columns does the raw data have?
+
+*Your sentence here, using inline code: The raw dataset has ___ rows and
+___ columns.*
+
+## Part 2 — Clean (20%)
+
+**2a.** Report how many missing values exist in `units_sold` and `revenue`.
+
+```{r}
+# TODO 2a
+
+```
+
+**2b.** Clean the data: remove exact duplicate rows, fill missing
+`units_sold`/`revenue` with their column medians, and standardize the
+`category` column into a new column with **exactly 5** distinct values
+(lowercase, trimmed, with underscores/extra spaces collapsed to a single
+space, and the `"cloth ing"` typo explicitly corrected to `"clothing"`).
+Save the result as `sales_clean`.
+
+```{r}
+# TODO 2b
+
+```
+
+Report, using inline code: how many rows remain after removing
+duplicates, and how many distinct categories does `sales_clean` have?
+
+*Your sentence here: After cleaning, the dataset has ___ rows and ___
+distinct categories.*
+
+## Part 3 — Analyze (25%)
+
+**3a.** Compute total revenue per `store`, sorted highest to lowest.
+
+```{r}
+# TODO 3a
+
+```
+
+**3b.** Compute total revenue per `category`, sorted highest to lowest.
+
+```{r}
+# TODO 3b
+
+```
+
+Report, using inline code: which store and which category had the
+highest total revenue?
+
+*Your sentence here: The highest-revenue store was ___, and the
+highest-revenue category was ___.*
+
+## Part 4 — Visualize (20%)
+
+**4a.** Create a bar chart of total revenue by category, with a title and
+axis labels.
+
+```{r}
+# TODO 4a
+
+```
+
+**4b.** Create a box plot of revenue by category. Use `#| echo: false` on
+this chunk so only the chart appears in your rendered report, not the
+code.
+
+```{r}
+# TODO 4b
+
+```
+
+## Part 5 — Written Reflection & AI Disclosure (20%)
+
+**5a.** Why does writing this analysis as a Quarto report, instead of a
+plain R script, change how much you (or someone else) can trust the
+numbers in Part 3? Answer in 2–3 sentences.
+
+*Your answer here:*
+
+**5b.** If you used an AI tool for any part of this assignment, briefly
+state where and how below, and how you verified the result. If you did
+not use any AI tool, write "No AI tools were used."
+
+*Your answer here:*
